@@ -74,9 +74,11 @@ p {
   background: #1ed760;
 }
 
+
+/* Spotify logo */
 .spotify-logo {
-  width: 24px;
-  height: 24px;
+  width: 32px;  /* Reasonable small icon */
+  height: 32px;
   margin-right: 10px;
 }
 
@@ -84,12 +86,25 @@ p {
   text-align: center;
 }
 
+/* Album cover */
 .album-cover {
-  width: 200px;
+  width: 200px;        /* Fixed reasonable size */
   height: 200px;
+  max-width: 90%;      /* Shrinks on small screens */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .album-cover {
+    width: 150px;
+    height: 150px;
+  }
+  .spotify-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 
 .song-list {
