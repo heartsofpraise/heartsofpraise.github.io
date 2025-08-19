@@ -1,22 +1,37 @@
-body {
-  font-family: Arial, sans-serif;
+/* General Reset */
+body, h1, h2, p, ul, li, a {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
   background: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
 
 header {
-  background: #222;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+  background: #1DB954; /* Spotify green */
+  color: white;
+  padding: 1rem 0;
+}
+
+.header-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 nav a {
-  color: #fff;
-  margin: 0 1rem;
+  color: white;
+  margin-left: 1rem;
   text-decoration: none;
+  font-weight: bold;
 }
 
 nav a:hover {
@@ -24,33 +39,83 @@ nav a:hover {
 }
 
 main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-h1, h2 {
+.bio, .spotify, .album {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #1DB954;
   text-align: center;
 }
 
-ul {
+p {
+  margin-bottom: 1rem;
+}
+
+.spotify-link {
+  display: inline-flex;
+  align-items: center;
+  background: #191414;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.spotify-link:hover {
+  background: #1ed760;
+}
+
+.spotify-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.album-container {
+  text-align: center;
+}
+
+.album-cover {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.song-list {
   list-style: none;
   padding: 0;
 }
 
-ul li {
-  text-align: center;
+.song-list li {
   margin: 0.5rem 0;
 }
 
-a {
-  color: #1DB954; /* Spotify green accent */
+.song-list a {
+  text-decoration: none;
+  color: #1DB954;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.song-list a:hover {
+  color: #14833b;
 }
 
 footer {
-  background: #222;
-  color: #fff;
   text-align: center;
+  background: #222;
+  color: white;
   padding: 1rem;
   margin-top: 2rem;
 }
